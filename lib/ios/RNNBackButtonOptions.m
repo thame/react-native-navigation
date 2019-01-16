@@ -16,7 +16,11 @@
 																	 style:UIBarButtonItemStylePlain
 																	target:nil
 																	action:nil];
-		
+
+		if (self.color) {
+			backItem.tintColor = [RCTConvert UIColor:self.color];
+		}
+
 		[self setBackItem:backItem onViewController:viewController];
 	}
 	
